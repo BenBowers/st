@@ -55,4 +55,4 @@ dkms.conf
 st
 
 # Ignore config.h
-congig.h
+config.h
