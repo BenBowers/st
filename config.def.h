@@ -118,8 +118,8 @@ static const char *colorname[] = {
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#2e3440",
+	"#2e3440", /* background */
+	"#d8dee9" , /* foreground */
 };
 
 
@@ -127,18 +127,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 256;
-
-/* Colors used for selection */
-unsigned int selectionbg = 257;
-unsigned int selectionfg = 7;
-/* If 0 use selectionfg as foreground in order to have a uniform foreground-color */
-/* Else if 1 keep original foreground-color of each cell => more colors :) */
-static int ignoreselfg = 1;
-
 /*
  * Default shape of cursor
  * 2: Block ("█")
